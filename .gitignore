@@ -1,0 +1,19 @@
+# Local environment / tooling
+.claude/
+.vscode/
+.idea/
+
+# Node / build
+node_modules/
+dist/
+build/
+*.cache
+
+# Logs & local config
+*.log
+.env
+.env.local
+settings.local.json
+
+# Generated SEO reports (CI output)
+lighthouse-report/
