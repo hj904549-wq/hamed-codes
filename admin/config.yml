@@ -6,7 +6,7 @@
 
 backend:
   name: turbo-github
-  turbo_site_id: YOUR_TURBO_SITE_ID_PLACEHOLDER
+  turbo_site_id: 53686ec9-b7b7-4082-a845-b0064c1ee311
   branch: cms-content
 
 media_folder: "content/uploads"
@@ -21,22 +21,60 @@ collections:
     fields:
       - { label: "شناسه", name: "id", widget: "string", required: true }
       - { label: "نامک (Slug)", name: "slug", widget: "string", required: true }
-      - { label: "عنوان (فارسی)", name: "title_fa", widget: "string", required: true }
-      - { label: "عنوان (انگلیسی)", name: "title_en", widget: "string", required: true }
+      - {
+          label: "عنوان (فارسی)",
+          name: "title_fa",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "عنوان (انگلیسی)",
+          name: "title_en",
+          widget: "string",
+          required: true,
+        }
       - { label: "خلاصه (فارسی)", name: "excerpt_fa", widget: "text" }
       - { label: "خلاصه (انگلیسی)", name: "excerpt_en", widget: "text" }
-      - { label: "متن مقاله (فارسی)", name: "body_fa", widget: "markdown", required: true }
-      - { label: "متن مقاله (انگلیسی)", name: "body_en", widget: "markdown", required: true }
-      - { label: "دسته‌بندی", name: "category", widget: "select", options: ["uiux", "development", "optimization", "wordpress", "seo"] }
+      - {
+          label: "متن مقاله (فارسی)",
+          name: "body_fa",
+          widget: "markdown",
+          required: true,
+        }
+      - {
+          label: "متن مقاله (انگلیسی)",
+          name: "body_en",
+          widget: "markdown",
+          required: true,
+        }
+      - {
+          label: "دسته‌بندی",
+          name: "category",
+          widget: "select",
+          options: ["uiux", "development", "optimization", "wordpress", "seo"],
+        }
       - { label: "تگ‌ها", name: "tags", widget: "list" }
       - { label: "تصویر 표지", name: "cover_image", widget: "image" }
       - { label: "نویسنده", name: "author", widget: "string", default: "حامد" }
       - { label: "تاریخ", name: "date", widget: "datetime", required: true }
-      - { label: "منتشر شده", name: "published", widget: "boolean", default: true }
+      - {
+          label: "منتشر شده",
+          name: "published",
+          widget: "boolean",
+          default: true,
+        }
       - { label: "عنوان سئو (فارسی)", name: "seo_title_fa", widget: "string" }
       - { label: "عنوان سئو (انگلیسی)", name: "seo_title_en", widget: "string" }
-      - { label: "توضیح سئو (فارسی)", name: "seo_description_fa", widget: "text" }
-      - { label: "توضیح سئو (انگلیسی)", name: "seo_description_en", widget: "text" }
+      - {
+          label: "توضیح سئو (فارسی)",
+          name: "seo_description_fa",
+          widget: "text",
+        }
+      - {
+          label: "توضیح سئو (انگلیسی)",
+          name: "seo_description_en",
+          widget: "text",
+        }
 
   - name: "portfolio"
     label: "نمونه کارها"
@@ -46,17 +84,37 @@ collections:
     fields:
       - { label: "شناسه", name: "id", widget: "string", required: true }
       - { label: "نامک (Slug)", name: "slug", widget: "string", required: true }
-      - { label: "عنوان پروژه (فارسی)", name: "title_fa", widget: "string", required: true }
-      - { label: "عنوان پروژه (انگلیسی)", name: "title_en", widget: "string", required: true }
+      - {
+          label: "عنوان پروژه (فارسی)",
+          name: "title_fa",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "عنوان پروژه (انگلیسی)",
+          name: "title_en",
+          widget: "string",
+          required: true,
+        }
       - { label: "توضیح (فارسی)", name: "description_fa", widget: "text" }
       - { label: "توضیح (انگلیسی)", name: "description_en", widget: "text" }
-      - { label: "تصویرthumbnail", name: "thumbnail", widget: "image", required: true }
+      - {
+          label: "تصویرthumbnail",
+          name: "thumbnail",
+          widget: "image",
+          required: true,
+        }
       - { label: "تکنولوژی‌ها", name: "technologies", widget: "list" }
       - { label: "لینک گیت‌هاب", name: "github_url", widget: "url" }
       - { label: "لینک دمو", name: "live_url", widget: "url" }
       - { label: "ویژه", name: "featured", widget: "boolean", default: false }
       - { label: "ترتیب نمایش", name: "order", widget: "number", default: 0 }
-      - { label: "منتشر شده", name: "published", widget: "boolean", default: true }
+      - {
+          label: "منتشر شده",
+          name: "published",
+          widget: "boolean",
+          default: true,
+        }
 
   - name: "settings"
     label: "تنظیمات سایت"
@@ -68,5 +126,14 @@ collections:
           - { label: "نام سایت", name: "site_name", widget: "string" }
           - { label: "توضیح سایت", name: "site_description", widget: "text" }
           - { label: "ایمیل", name: "email", widget: "string" }
-          - { label: "لینک‌های اجتماعی", name: "social_links", widget: "list", field: { label: "لینک", name: "link", widget: "url" } }
-          - { label: "تصویر پیش‌فرض og:image", name: "default_og_image", widget: "image" }
+          - {
+              label: "لینک‌های اجتماعی",
+              name: "social_links",
+              widget: "list",
+              field: { label: "لینک", name: "link", widget: "url" },
+            }
+          - {
+              label: "تصویر پیش‌فرض og:image",
+              name: "default_og_image",
+              widget: "image",
+            }
